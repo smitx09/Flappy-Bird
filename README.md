@@ -7,8 +7,8 @@ A browser web game inspired by the classic **Flappy Bird**, built with HTML5 Can
 ## 🚀 How to Play
 
 1. **Option 1**: Double-click `start_game.bat` or `index.html` to open.
-2. 
-3. **Option 2**: Open `index.html` in Google Chrome, Edge, Brave, or Firefox.
+
+2. **Option 2**: Open `index.html` in Google Chrome, Edge, Brave, or Firefox.
 
 No local web server, node, or python dependencies are required! It works completely offline and standalone.
 
