@@ -21,5 +21,20 @@ No local web server, node, or python dependencies are required! It works complet
 | **Pause / Resume** | `P` key or the top-right `⏸️` button |
 | **Mute / Unmute** | `M` key or the top-left `🔊` button |
 
+---
 
+## ✨ Features
 
+- **Fluid 60 FPS Physics**: Smooth gravity, flap acceleration, velocity-based rotation, and collision hitboxes calibrated for fair gameplay.
+- **Custom Characters / Bird Skins**:
+  - 🐥 **Classic Goldie**: Traditional yellow arcade bird
+  - 🐦 **Sky Blue**: Azure flyer
+  - 🦜 **Blaze Red**: Fire bird
+  - 🦇 **Cyber Violet**: Sleek nocturnal glider
+- **3 Difficulty Modes**:
+  - **Easy**: Wider gap (145px), slower pipes (2.2px/frame)
+  - **Normal**: Standard arcade challenge (120px gap, 2.7px/frame)
+  - **Hard**: Tight gap (98px), faster pipes (3.4px/frame)
+- **Built-in 8-bit Audio Synthesizer**: Uses HTML5 Web Audio API to create authentic retro sound effects (jump, score chime, crash, game over) without needing external audio files.
+- **Score & High Score Tracking**: Automatically saves your all-time high score in browser `localStorage`.
+- **Juicy Game Feel**: Parallax scrolling clouds, rolling hills, moving ground texture, jump puff particles, score confetti, screen shake on impact, and medal awards (🥉 Bronze, 🥈 Silver, 🥇 Gold, 💎 Diamond).

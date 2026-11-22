@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Flappy Bird - Arcade Edition</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="cabinet-container">
+      <!-- Game Canvas -->
+      <canvas id="gameCanvas" width="400" height="600"></canvas>
+
+      <!-- HUD & UI Overlays -->
+      <div id="uiOverlay" class="ui-overlay">
+        <!-- Top Quick Bar -->
+        <div class="top-bar">
+          <button id="soundBtn" class="icon-btn" title="Toggle Sound (M)">
+            <span id="soundIcon">🔊</span>
+          </button>
+          <div id="liveScore" class="live-score">0</div>
+          <button id="pauseBtn" class="icon-btn" title="Pause Game (P)">
+            <span id="pauseIcon">⏸️</span>
+          </button>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="startScreen" class="overlay-card active">
+          <h1 class="game-title">FLAPPY<br><span class="accent-text">BIRD</span></h1>
+          <div class="bird-preview-box">
+            <div id="birdPreview" class="animated-preview-bird"></div>
+          </div>
+
+          <!-- Character Selector -->
+          <div class="customizer-section">
+            <span class="section-label">SELECT BIRD</span>
+            <div class="skins-row">
+              <button class="skin-btn active" data-skin="classic" title="Classic Goldie">🐥</button>
+              <button class="skin-btn" data-skin="blue" title="Sky Blue">🐦</button>
+              <button class="skin-btn" data-skin="red" title="Blaze Red">🦜</button>
+              <button class="skin-btn" data-skin="phoenix" title="Cyber Violet">🦇</button>
+            </div>
+          </div>
+
+          <!-- Difficulty Selector -->
+          <div class="customizer-section">
+            <span class="section-label">DIFFICULTY</span>
+            <div class="difficulty-row">
+              <button class="diff-btn" data-diff="easy">Easy</button>
+              <button class="diff-btn active" data-diff="normal">Normal</button>
+              <button class="diff-btn" data-diff="hard">Hard</button>
+            </div>
+          </div>
+
+          <button id="startPlayBtn" class="big-action-btn pulse">PLAY GAME</button>
+          <div class="controls-hint">
+            <p>Press <b>SPACE</b>, <b>CLICK</b>, or <b>TAP</b> to Fly</p>
+          </div>
+        </div>
+
+        <!-- Pause Overlay -->
+        <div id="pauseScreen" class="overlay-card hidden">
+          <h2>GAME PAUSED</h2>
+          <p>Press <b>P</b> or tap Resume to continue</p>
+          <button id="resumeBtn" class="big-action-btn">RESUME</button>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="overlay-card hidden">
+          <h2 class="game-over-title">GAME OVER</h2>
+          
+          <div class="scoreboard-panel">
+            <div class="medal-slot">
+              <span class="stat-label">MEDAL</span>
+              <div id="medalIcon" class="medal-display">🎖️</div>
+            </div>
+            <div class="score-stats">
+              <div class="stat-row">
+                <span class="stat-label">SCORE</span>
+                <span id="finalScore" class="stat-val">0</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">BEST</span>
+                <span id="bestScore" class="stat-val">0</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="newBestBadge" class="new-record-tag hidden">★ NEW HIGH SCORE! ★</div>
+
+          <button id="restartBtn" class="big-action-btn pulse">PLAY AGAIN</button>
+          <button id="menuBtn" class="secondary-btn">MAIN MENU</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instruction Footer Bar -->
+    <div class="footer-bar">
+      <span>Controls: <b>Spacebar</b> / <b>Left Click</b> / <b>Touch</b></span>
+      <span>•</span>
+      <span><b>M</b> Mute</span>
+      <span>•</span>
+      <span><b>P</b> Pause</span>
+    </div>
+  </div>
+
+  <script src="audio.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
